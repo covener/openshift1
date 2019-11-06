@@ -5,6 +5,7 @@ import java.util.Map;
 import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 
 /**
  *
@@ -14,6 +15,7 @@ import javax.ws.rs.Path;
 public class HelloController {
 
     @GET
+    @Produces("text/plain")
     public String sayHello() {
         StringBuffer sb  = new StringBuffer();
         Map<String, String> env = System.getenv();
