@@ -1,5 +1,5 @@
 mvn clean install
-docker build -t openshift1:latest .
+s2i build git://github.com/covener/openshift1 openliberty/open-liberty-s2i:latest openshift1
 docker run -p 9080:9080 openshift1:latest
 
 # wget http://localhost:9080/openshift1/data/hello -O-
