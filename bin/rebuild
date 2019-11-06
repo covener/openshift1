@@ -1,0 +1,7 @@
+mvn clean install
+docker build -t openshift1:latest .
+docker run -p 9080:9080 openshift1:latest
+
+# wget http://localhost:9080/openshift1/data/hello -O-
+# oc start-build openshift-1-git-b
+
