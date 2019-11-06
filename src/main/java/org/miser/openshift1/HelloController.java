@@ -20,7 +20,7 @@ public class HelloController {
         StringBuffer sb  = new StringBuffer();
         Map<String, String> env = System.getenv();
         for (String s: env.keySet()) { 
-            sb.append(s + System.getenv(s) + "\n");
+            sb.append(s + "=" + System.getenv(s) + "\n");
         }
         return sb.toString();
     }
